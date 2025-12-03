@@ -14,16 +14,16 @@ int main()
         string ls = to_string(l);
         t = ls.substr(0, max(1, int(ls.size() / 2)));
         thalf = stoll(t);
-        while(l > thalf + thalf * pow(10, t.size()))
+        while(l > stoll(t + t))
         {
             thalf++;
             t = to_string(thalf);
         }
         cout << "l - " << l << ", r - " << r << endl;
-        while(thalf + thalf * pow(10, t.size()) < r)
+        while(stoll(t + t) < r)
         {
             cout << t + t << endl;
-            cnt += thalf + thalf * pow(10, t.size());
+            cnt += stoll(t + t);
             thalf++;
             t = to_string(thalf);
         }
